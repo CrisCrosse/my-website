@@ -151,14 +151,16 @@ const PortfolioSection = () => (
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ProjectCard
-                title="Placeholder"
-                description="A comprehensive dashboard built with React and D3.js for real-time sales visualization."
-                tech={['React', 'D3.js', 'Tailwind']}
+                title="Quiz App"
+                description="A timed quiz built with React and an embedded database"
+                tech={['React']}
+                link={"https://quiz-app-iota-ochre.vercel.app/"}
             />
             <ProjectCard
                 title="Placeholder 2"
                 description="A scalable, low-latency API designed for handling millions of requests per day."
                 tech={['Node.js', 'AWS Lambda', 'DynamoDB']}
+                link={"Placeholder 2"}
             />
         </div>
 
@@ -178,20 +180,23 @@ interface ProjectCardProps {
     title: string;
     description: string;
     tech: string[];
+    link: string;
 }
 
-const ProjectCard = ({ title, description, tech }: ProjectCardProps) => (
-    <div className="bg-slate-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-slate-200">
-        <h4 className="text-xl font-bold text-slate-900 mb-2">{title}</h4>
-        <p className="text-slate-600 mb-4">{description}</p>
-        <div className="flex flex-wrap gap-2">
-            {tech.map((t, i) => (
-                <span key={i} className="text-xs font-semibold px-3 py-1 bg-indigo-200 text-indigo-900 rounded-full">
-                    {t}
-                </span>
-            ))}
+const ProjectCard = ({ title, description, tech, link }: ProjectCardProps) => (
+    <a href={link}>
+        <div className="bg-slate-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-slate-200">
+            <h4 className="text-xl font-bold text-slate-900 mb-2">{title}</h4>
+            <p className="text-slate-600 mb-4">{description}</p>
+            <div className="flex flex-wrap gap-2">
+                {tech.map((t, i) => (
+                    <span key={i} className="text-xs font-semibold px-3 py-1 bg-indigo-200 text-indigo-900 rounded-full">
+                        {t}
+                    </span>
+                ))}
+            </div>
         </div>
-    </div>
+    </a>
 );
 
 
