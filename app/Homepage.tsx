@@ -89,10 +89,15 @@ const HeroSection = () => (
     <section className="text-center py-20 bg-white rounded-2xl shadow-xl border border-indigo-100">
         <div className="p-8 md:p-12">
             <img
-                src="https://placehold.co/150x150/5B6EED/ffffff?text=C"
-                alt="Chris's Profile Picture Placeholder"
+                src="/ConferenceHeadshot.jpeg"
+                alt="Chris's Profile Picture"
                 className="w-36 h-36 rounded-full mx-auto mb-6 object-cover border-4 border-indigo-200 shadow-inner"
-                onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/150x150/5B6EED/ffffff?text=C" }}
+                onError={
+                    ({currentTarget}) => {
+                        currentTarget.onerror = null;
+                        currentTarget.src = './favicon.ico';
+                    }
+                }
             />
             <h2 className="text-5xl md:text-7xl font-extrabold mb-4 leading-tight text-slate-900">
                 Hi, I'm <span className="text-indigo-600">Chris</span>.
