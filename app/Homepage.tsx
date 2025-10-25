@@ -122,10 +122,10 @@ const AboutSection = () => (
 
         <div className="space-y-6 text-lg text-slate-700">
             <p>
-                I am a passionate developer with 2 years of experience of data engineering and full stack developing. My goal is to create high-performance web applications for complex challenges.
+                I have 2 years of experience in data engineering and full stack developing. My goal is to create high-performance web applications for complex challenges.
             </p>
             <p>
-                I have experience with a variety of technologies and love learning new
+                I have used a variety of languages and technologies and love learning new concepts. My greatest strength is that I am self-driven having converted to software developing after completing a geology degree.
             </p>
         </div>
 
@@ -167,7 +167,7 @@ const PortfolioSection = () => (
                 href="#projects-full"
                 className="text-indigo-600 hover:text-indigo-800 font-medium text-lg border-b-2 border-indigo-200 hover:border-indigo-600 transition duration-200"
             >
-                View All 8 Projects &rarr;
+                Placeholder: View All 8 Projects &rarr;
             </a>
         </div>
 
